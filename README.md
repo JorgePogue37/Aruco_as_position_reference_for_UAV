@@ -38,13 +38,13 @@ The system uses an Aruco marker as a ground truth reference for the UAV's positi
     * Run CMake: `cmake ..`
     * Build: `make`  (This will build the executables for each module separately.)
 
+## Important:
+    
+- The `Aruco_Parcel_Module` and `aruco_pose_publisher` modules are intended to run on the same computer (e.g., on the drone's onboard computer). The `VisualFeedback_Display` module runs on a *separate* computer for visualization.
+    
+- Make sure to modify the image receiver computer IP and the size of the aruco marker on the Main.cpp file of the Aruco_Parcel_Marker module and the camera parameters on the CameraCalibration.yaml file. [https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html](https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html)
+
 ## Usage
-
-### Important: 
-
-* The `Aruco_Parcel_Module` and `aruco_pose_publisher` modules are intended to run on the same computer (e.g., on the drone's onboard computer). The `VisualFeedback_Display` module runs on a *separate* computer for visualization.
-
-* Make sure to modify the image receiver computer IP and the size of the aruco marker on the Main.cpp file of the Aruco_Parcel_Marker module and the camera parameters on the CameraCalibration.yaml file. [https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html](https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html)
 
 1. **On the Drone (or Main Computer):**
     * **ROS Core (if applicable):** `rosmaster` (if using ROS for the position estimation module)
