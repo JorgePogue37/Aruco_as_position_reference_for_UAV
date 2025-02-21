@@ -26,7 +26,7 @@ The system uses an Aruco marker as a ground truth reference for the UAV's positi
 
 ### 2. Position Estimation and MAVROS Publication
 
-* **Description:** This module receives the Aruco pose data and image via UDP, processes the data to estimate the UAV's position and orientation, and publishes the estimated position using MAVROS.
+* **Description:** This module receives the Aruco pose data (translation and rotation vectors/matrix) via UDP, processes the data to estimate the UAV's position and orientation, and publishes the estimated position using MAVROS. 
 * **Dependencies:**
     * ROS (Robot Operating System)
     * MAVROS
