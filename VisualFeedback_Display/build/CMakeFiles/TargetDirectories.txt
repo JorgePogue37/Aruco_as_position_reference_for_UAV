@@ -1,0 +1,3 @@
+/home/jorge/Documents/Demo_Navantia/VisualFeedback_Display/build/CMakeFiles/VisualFeedback_Display.dir
+/home/jorge/Documents/Demo_Navantia/VisualFeedback_Display/build/CMakeFiles/edit_cache.dir
+/home/jorge/Documents/Demo_Navantia/VisualFeedback_Display/build/CMakeFiles/rebuild_cache.dir
