@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ModuleInterface.dir/ModuleInterface.cpp.o"
-  "CMakeFiles/ModuleInterface.dir/ModuleInterface.cpp.o.d"
   "libModuleInterface.a"
   "libModuleInterface.pdb"
 )

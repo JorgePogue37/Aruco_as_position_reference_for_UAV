@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/grvc/Demo_Navantia/Aruco_Parcel_Marker/UDPPublisher/UDPPublisher.cpp
+UDPPublisher.h
+/home/grvc/Demo_Navantia/Aruco_Parcel_Marker/UDPPublisher/UDPPublisher.h
+
+/home/grvc/Demo_Navantia/Aruco_Parcel_Marker/UDPPublisher/UDPPublisher.h
+iostream
+-
+stdio.h
+-
+string.h
+-
+stdlib.h
+-
+unistd.h
+-
+sys/time.h
+-
+sys/types.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+netdb.h
+-
+

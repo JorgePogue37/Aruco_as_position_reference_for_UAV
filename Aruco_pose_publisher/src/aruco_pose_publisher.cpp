@@ -295,27 +295,30 @@ void receiveArucoMRPoseThread()
 							R_cam[i][j] = dataPacketRobotPose->rot[3 * i + j];
 						}
 					}
+					// Compute yaw from the rotation matrix
+					double roll, pitch, yaw;
+					R_cam.getRPY(roll, pitch, yaw); // Extract Euler angles
 
-					tf2::Matrix3x3 R_aruco = R_cam.transpose();
+					// Construct a new rotation matrix with only yaw
+					tf2::Matrix3x3 R_yaw;
+					R_yaw.setRPY(0.0, -pitch+M_PI, M_PI); // Only keep yaw
 
-					R_aruco[0][1] = 0;
-					R_aruco[1][0] = 0;
-					R_aruco[1][2] = 0;
-					R_aruco[2][1] = 0;
-					R_aruco[1][1] = 1;
-					
-					tf2::Vector3 t_aruco = R_aruco * t_cam;
+					// Transform the translation using only yaw
+					tf2::Vector3 t_aruco = R_yaw * t_cam;
 
+					// Convert the rotation matrix to quaternion
 					tf2::Quaternion q_aruco;
-					R_aruco.getRotation(q_aruco);
+					R_yaw.getRotation(q_aruco);
 
+					// Update the transformation
 					aruco_to_camera.setOrigin(t_aruco);
 					aruco_to_camera.setRotation(q_aruco);
 
                     cout << "Posición recibida de Aruco:   " << t_cam[0] << "   " << t_cam[1] << "    " << t_cam[2] << endl;
-                    cout << "Orientación recibida de Aruco:   " << R_aruco[0][0] << "   " << R_aruco[0][1] << "    " << R_aruco[0][2] << endl;
-                    cout << "Orientación recibida de Aruco:   " << R_aruco[1][0] << "   " << R_aruco[1][1] << "    " << R_aruco[1][2] << endl;
-                    cout << "Orientación recibida de Aruco:   " << R_aruco[2][0] << "   " << R_aruco[2][1] << "    " << R_aruco[2][2] << endl;
+		    cout << "roll:  " << roll << "  Pitch:  " << pitch << "  Yaw:  " << yaw << endl;
+                    cout << "Orientación recibida de Aruco:   " << R_cam[0][0] << "   " << R_cam[0][1] << "    " << R_cam[0][2] << endl;
+                    cout << "Orientación recibida de Aruco:   " << R_cam[1][0] << "   " << R_cam[1][1] << "    " << R_cam[1][2] << endl;
+                    cout << "Orientación recibida de Aruco:   " << R_cam[2][0] << "   " << R_cam[2][1] << "    " << R_cam[2][2] << endl;
                     
                     validArucoPose = 1; // Signal that a valid pose has been received
                 }

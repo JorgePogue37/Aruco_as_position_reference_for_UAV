@@ -53,7 +53,7 @@ using namespace cv;
 #define UDP_PORT_TX_ADROM		25003
 #define UDP_PORT_RX_ADROM		24003
 
-#define IP_ADDRESS_VIEWER		"127.0.0.1"
+#define IP_ADDRESS_VIEWER		"10.43.0.171"
 //#define IP_ADDRESS_VIEWER		"192.168.0.171"
 // #define IP_ADDRESS_VIEWER		"192.168.0.219"
 #define UDP_PORT_VIEWER			28001
@@ -105,7 +105,7 @@ int main(int argc, char ** argv)
 	Mat camMatrix, distCoeffs;
 	
 	int cameraIndex = 0;
-	float markerSize = 173.5;
+	float markerSize = 35.9*7;
 	int targetMarker = 0;
 	int targetMarkedFound = 0;
 	

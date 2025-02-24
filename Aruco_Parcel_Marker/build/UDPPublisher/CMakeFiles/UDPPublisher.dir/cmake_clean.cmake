@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/UDPPublisher.dir/UDPPublisher.cpp.o"
-  "CMakeFiles/UDPPublisher.dir/UDPPublisher.cpp.o.d"
   "libUDPPublisher.a"
   "libUDPPublisher.pdb"
 )

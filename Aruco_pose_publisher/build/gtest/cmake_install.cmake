@@ -37,14 +37,9 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-# Set default install directory permissions.
-if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/usr/bin/objdump")
-endif()
-
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/jorge/Documents/Demo_Navantia/Aruco_pose_publisher/build/gtest/googlemock/cmake_install.cmake")
+  include("/home/grvc/Demo_Navantia/Aruco_pose_publisher/build/gtest/googlemock/cmake_install.cmake")
 
 endif()
 

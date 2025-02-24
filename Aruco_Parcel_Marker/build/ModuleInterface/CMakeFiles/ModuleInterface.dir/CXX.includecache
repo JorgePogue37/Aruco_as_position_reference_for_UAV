@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/grvc/Demo_Navantia/Aruco_Parcel_Marker/ModuleInterface/ModuleInterface.cpp
+ModuleInterface.h
+/home/grvc/Demo_Navantia/Aruco_Parcel_Marker/ModuleInterface/ModuleInterface.h
+
+/home/grvc/Demo_Navantia/Aruco_Parcel_Marker/ModuleInterface/ModuleInterface.h
+iostream
+-
+thread
+-
+fstream
+-
+string
+-
+stdio.h
+-
+string.h
+-
+math.h
+-
+stdint.h
+-
+unistd.h
+-
+sys/time.h
+-
+sys/types.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+netdb.h
+-
+fcntl.h
+-
+

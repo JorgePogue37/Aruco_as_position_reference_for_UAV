@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/UDPImage.dir/UDPImage.cpp.o"
-  "CMakeFiles/UDPImage.dir/UDPImage.cpp.o.d"
   "libUDPImage.a"
   "libUDPImage.pdb"
 )
